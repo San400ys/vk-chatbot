@@ -11,14 +11,17 @@ class Config:
     BASE_DIR: Path = Path(__file__).parent
     DATABASE_PATH: Path = BASE_DIR / 'data' / 'bot_database.db'
 
-    AUTHOR_NAME: str = "Бантя Александр Олегович"
     AUTHOR_GROUP: str = "545-M"
-    AUTHOR_VK: str = "https://vk.com/san400ys"
-    AUTHOR_INFO: str = f"""
-👨‍💻 Автор: {AUTHOR_NAME}
-🎓 Группа: {AUTHOR_GROUP}
-🔗 ВК: {AUTHOR_VK}
-    """
+
+    AUTHORS: list = [
+        {"name": "Бантя Александр", "vk": "https://vk.com/san400ys"},
+        {"name": "Нильмаер Иван", "vk": "https://vk.com/vanish_bb"},
+        {"name": "Сумин Артем", "vk": "https://vk.com/local_satan"},
+    ]
+
+    AUTHOR_INFO: str = "👨‍💻 АВТОРЫ ПРОЕКТА\n\nГруппа: " + AUTHOR_GROUP + "\n\n" + "\n".join(
+        [f"{a['name']}\n   ВК: {a['vk']}\n" for a in AUTHORS]
+    )
 
     BLOG_POSTS: list = [
         "📰 Новость 1: Крутая новость 1",

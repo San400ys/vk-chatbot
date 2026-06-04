@@ -2,7 +2,7 @@ from vk_api.keyboard import VkKeyboard, VkKeyboardColor
 
 def get_main_keyboard() -> VkKeyboard:
     keyboard = VkKeyboard(one_time=False)
-    keyboard.add_button("📚 Автор", color=VkKeyboardColor.PRIMARY)
+    keyboard.add_button("📚 Авторы", color=VkKeyboardColor.PRIMARY)
     keyboard.add_button("📰 Блог", color=VkKeyboardColor.PRIMARY)
     keyboard.add_line()
     keyboard.add_button("💰 Правовой калькулятор", color=VkKeyboardColor.POSITIVE)
